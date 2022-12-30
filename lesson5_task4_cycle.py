@@ -1,5 +1,7 @@
 # Количество монет
 price = int(input())
+print(price // 25 + price % 25 // 10 + price % 25 % 10 // 5 + price % 5)
+
 counter = 0
 while price >= 25:
     price = price - 25
