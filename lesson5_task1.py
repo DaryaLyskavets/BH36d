@@ -2,6 +2,10 @@
 n = int(input())
 m = int(input())
 k = int(input())
-for i in range(n+1):
+i = 0
+count = 0
+while count < n:
+    i += 1
     if i % m == 0 and i > k:
+        count += 1
         print(i, end=' ')
