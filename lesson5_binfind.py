@@ -1,8 +1,8 @@
-#поиск числа а в списке list (бинарный поиск)
+# поиск числа а в списке list (бинарный поиск)
 from random import randint
 
 a = randint(1, 15)
-list_1=[]
+list_1 = []
 for i in range(1, 16):
     list_1.append(i)
 print(a)
