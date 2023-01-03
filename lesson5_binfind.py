@@ -11,7 +11,7 @@ high = len(list_1) - 1
 mid = (low + high) // 2
 while a != list_1[mid]:
     if a == list_1[mid]:
-        print(mid)
+        print(list_1[mid])
     elif a > list_1[mid]:
         low = mid + 1
     elif a < list_1[mid]:
