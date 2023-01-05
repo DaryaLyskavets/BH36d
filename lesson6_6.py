@@ -1,7 +1,7 @@
 # Дан список рандомных чисел, необходимо отсортировать его в виде, сначала четные, потом нечётные
 from random import randint
 
-numbers = [randint(-100, 100) for _ in range(randint(0, 10))]
+numbers = [randint(0, 100) for _ in range(randint(0, 10))]
 print(numbers)
 
 
