@@ -10,5 +10,4 @@ def morze(text):
                   }
     a = [morze_dict.get(i) for i in text]
     return a
-
 print(*morze(input()))
