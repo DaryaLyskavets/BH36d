@@ -15,5 +15,4 @@ def sort_even_odd(number):
             odd.append(i)
     return even + odd
 
-
 print(sort_even_odd(numbers))
