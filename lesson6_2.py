@@ -8,6 +8,7 @@ def morze(text):
                   's': '•••', 't': '—', 'u': '••—', 'v': '•••—', 'w': '•——', 'x': '—••—',
                   'y': '—•——', 'z': '——••'
                   }
-    a = [morze_dict.get(i) for i in text]
+    a = [morze_dict.get(i) for i in text.lower()]
     return a
+
 print(*morze(input()))
