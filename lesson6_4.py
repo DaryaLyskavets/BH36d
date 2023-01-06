@@ -2,6 +2,8 @@
 # образом, чтобы остались только строки
 my_list = ['hello', 3, '45', 'python', 356, ['l', 'm'], '!']
 
+print(*list(filter(lambda x: isinstance(x, str), my_list)))
+
 def only_string(list):
     new_list = []
     for i in list:
