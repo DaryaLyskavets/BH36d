@@ -16,3 +16,7 @@ def sort_even_odd(number):
     return even + odd
 
 print(sort_even_odd(numbers))
+
+list_1 = list(filter(lambda x: x % 2 == 0, numbers))
+list_2 = list(filter(lambda x: x % 2 != 0, numbers))
+print(list_1 + list_2)
