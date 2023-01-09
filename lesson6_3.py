@@ -9,3 +9,10 @@ def displace(input_list):
     return last + first
 
 print(displace(exp_list))
+
+def shift_list(objs, shift):
+    if abs(shift)  <= len(objs):
+        odjs = objs[-shift: ] + objs[: -shift]
+    else:
+        shift -= (shift // len(objs)) * len(objs)
+    return odjs
