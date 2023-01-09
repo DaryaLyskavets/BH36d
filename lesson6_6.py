@@ -15,8 +15,12 @@ def sort_even_odd(number):
             odd.append(i)
     return even + odd
 
+
 print(sort_even_odd(numbers))
 
-list_1 = list(filter(lambda x: x % 2 == 0, numbers))
-list_2 = list(filter(lambda x: x % 2 != 0, numbers))
-print(list_1 + list_2)
+
+def sort_even_numbers(list):
+    list_1 = list(filter(lambda x: x % 2 == 0, numbers))
+    list_2 = list(filter(lambda x: x % 2 != 0, numbers))
+    list.sort(key=lambda x: x % 2)
+    print(list_1 + list_2)
