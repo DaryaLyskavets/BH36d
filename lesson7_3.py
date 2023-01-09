@@ -12,3 +12,4 @@ users = [{'id': 11, 'name': 'Alex', 'referrer_id': '' },
          ]
 
 def get_referrals_count(users: dict):
+    pass
