@@ -12,3 +12,10 @@ def only_string(list):
     return new_list
 
 print(*only_string(my_list))
+
+
+def string_filter(objs):
+    for i in range(len(objs) -1, -1, -1):
+        if not isinstance(objs[i], str):
+            del objs[i]
+    return objs
