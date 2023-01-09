@@ -10,3 +10,8 @@ def reverse_list(numbers):
 
 
 reverse_list(my_list)
+
+def reverse(objs):
+    for i in range(len(objs) //2):
+        objs[i], objs[~i] = objs[~i], objs[i]
+    return objs
