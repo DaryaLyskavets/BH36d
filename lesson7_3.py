@@ -4,12 +4,20 @@
 # для каждого пользователя, каждому пользователю добавить ключ referrals_count с
 # количеством человек, которых он пригласил
 
-users = [{'id': 11, 'name': 'Alex', 'referrer_id': '' },
-         {'id': 22, 'name': 'Peter', 'referrer_id': 11 },
-         {'id': 121, 'name': 'Ron', 'referrer_id': 33 },
+users = [{'id': 11, 'name': 'Alex', 'referrer_id': ''},
+         {'id': 22, 'name': 'Peter', 'referrer_id': 11},
+         {'id': 121, 'name': 'Ron', 'referrer_id': 33},
          {'id': 33, 'name': 'Tom', 'referrer_id': 22},
-         {'id': 144, 'name': 'Bob', 'referrer_id': 11 }
+         {'id': 144, 'name': 'Bob', 'referrer_id': 11}
          ]
 
-def get_referrals_count(users: dict):
-    pass
+
+def get_referrals_count(users):
+    referrers = [i.get('referrer_id') for i in users]
+    id_num = [j.get('id') for j in users]
+    for i in range(len(referrers)):
+        users[i]['referrals_count'] = referrers.count(id_num[i])
+    print(users)
+
+
+get_referrals_count(users)
