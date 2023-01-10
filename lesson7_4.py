@@ -13,7 +13,7 @@ food_basket = [('01', 2), ('03', 5), ('04', 1), ('05', 1)]
 def sales_receipt(products, food_basket):
     user_bill = []
     for i in products:
-        for j in range(0, 4):
+        for j in range(len(food_basket)):
             if food_basket[j][0] == i.get('id'):
                 user_bill.append(i.get('title') + ' ' + str(food_basket[j][1]) + ' '+
                                 str(i.get('price')*food_basket[j][1]) + ' ' +
