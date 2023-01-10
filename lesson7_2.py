@@ -9,6 +9,7 @@ humans = [{'gender': 'm', 'height': '186'},
           {'gender': 'w', 'height': '162'},
           {'gender': 'm', 'height': '181'}]
 
+
 def average_height(humans, gender):
     total = 0
     all_height = []
@@ -18,6 +19,7 @@ def average_height(humans, gender):
     for i in all_height:
         total += int(i)
     return total / len(all_height)
+
 
 gender = input()
 print(average_height(humans, gender))
