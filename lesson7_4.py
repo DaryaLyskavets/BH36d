@@ -10,14 +10,15 @@ products = [{'id': '01', 'title': 'milk', 'price': 1.98, 'discount': 1},
             ]
 food_basket = [('01', 2), ('03', 5), ('04', 1), ('05', 1)]
 
-def sales_bill(products, food_basket):
+def sales_receipt(products, food_basket):
     user_bill = []
     for i in products:
-        if food_basket[0][0] == i.get('id'):
-            user_bill.append(i.get('title') + ' ' + str(food_basket[0][1]) + ' '+
-                             str(i.get('price')*food_basket[0][1]) + ' ' +
-                             str(i.get('price')*food_basket[0][1] -
-                             i.get('price')*food_basket[0][1]/100*i.get('discount')))
+        for j in range(0, 4):
+            if food_basket[j][0] == i.get('id'):
+                user_bill.append(i.get('title') + ' ' + str(food_basket[j][1]) + ' '+
+                                str(i.get('price')*food_basket[j][1]) + ' ' +
+                                str(i.get('price')*food_basket[j][1] -
+                                i.get('price')*food_basket[j][1]/100*i.get('discount')))
     print(user_bill)
 
-sales_bill(products,food_basket)
+sales_receipt(products,food_basket)
