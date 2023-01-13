@@ -7,6 +7,7 @@ class Rectangle:
         self.b = b
         self.c = c
         self.d = d
+        # точки a, b, c, d с координатами [x, y]
 
     def perimeter(self) -> int:
         distance_1 = ((self.a[0] - self.c[0]) ** 2 + (self.a[1] - self.c[1]) ** 2) ** 0.5
