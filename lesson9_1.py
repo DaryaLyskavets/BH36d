@@ -10,20 +10,19 @@
 
 class Car:
 
-    @classmethod
-    def __init__(cls, color: str, count_passenger_seats: int, is_baby_seat: bool, is_busy: bool):
-        cls.is_busy = False
-        cls.is_baby_seat = is_baby_seat
+    def __init__(self, color: str, count_passenger_seats: int, is_baby_seat: bool, is_busy: bool):
+        self.is_busy = False
+        self.is_baby_seat = is_baby_seat
         if is_baby_seat:
-            cls.is_baby_seat = 'With baby seat'
+            self.is_baby_seat = 'With baby seat'
         else:
-            cls.is_baby_seat = 'Without baby seat'
-        cls.color = color
-        cls.count_passenger_seats = count_passenger_seats
-    @classmethod
-    def __str__(cls):
-        return f'Car: color = {cls.color}, passenger seats = {cls.count_passenger_seats}, ' \
-               f'baby seat = {cls.is_baby_seat}'
+            self.is_baby_seat = 'Without baby seat'
+        self.color = color
+        self.count_passenger_seats = count_passenger_seats
+
+    def __str__(self):
+        return f'Car: color = {self.color}, passenger seats = {self.count_passenger_seats}, ' \
+               f'baby seat = {self.is_baby_seat}'
 
 
 print(Car('black', 4, True, is_busy=False))
