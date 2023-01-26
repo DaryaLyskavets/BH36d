@@ -1,22 +1,22 @@
 class Category:
-    categories = []
+    categories = {}
 
     @classmethod
-    def add(cls, name: str):
-        for i in cls.categories:
-            if name not in cls.categories:
-                cls.categories.append(name)
-                return cls.categories.index(name)
+    def add(cls, name: str, is_published:bool):
+        for key in cls.categories:
+            if name not in cls.categories.keys():
+                cls.categories.update({name:True})
+                return cls.categories
             else:
                 raise ValueError
 
     @classmethod
-    def get(cls, index: int):
-        return cls.categories[index]
+    def get(cls, key: str):
+        return cls.categories.get(name)
 
     @classmethod
-    def delete(cls, index: int) -> None:
-        # if index in range(len(cls.categories():
+    def delete(cls, key: str)) -> None:
+        # if key in range(len(cls.categories():
         #     del cls.categories[index]
         try:
             del cls.categories[index]
